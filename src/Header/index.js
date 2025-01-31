@@ -1,9 +1,7 @@
 import "./style.css"
 
-const Header = ({title}) => (
-    <div>
-        <header className="section__header">{title}</header>
-    </div>
+const Header = ({ title }) => (
+    <header className="section__header">{title}</header>
 );
 
 export default Header;
