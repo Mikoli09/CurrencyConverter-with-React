@@ -1,0 +1,17 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 800px;
+    min-width: 500px;
+    background-color: rgba(212, 212, 208, 0.932);
+    padding: 30px 50px;
+    border: 2px solid #2e1414;
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+  }
+  
