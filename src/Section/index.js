@@ -2,11 +2,12 @@ import Header from "../Header";
 import Form from "../Form";
 import "./style.css"
 
-const Section = ({currencies}) => (
+
+const Section = () => (
     
 <section className="section">
       <Header title={"Kalkulator walutowy"} />
-      <Form currencies={currencies} />
+      <Form />
     </section>
 )
 
