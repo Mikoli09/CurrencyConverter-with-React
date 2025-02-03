@@ -1,0 +1,10 @@
+.form__button {
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 241);
+    cursor: pointer;
+  }
+  
