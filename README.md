@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# Tasks list
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo:
+Check my demo [here]("https://mikoli09.github.io/CurrencyConverter-with-React/")
+
+
+## Description:
+
+You may find here my simple currency converter.  
+Select one of the three available currencies and convert to the other one.
+
+
+![taskslistGIF](./src/assets/conversion.gif)
+
+## Technologies used
+- **HTML** - Provides website structure,
+- **CSS** - Used for styling the website with the BEM methodology for better organization and readability.
+- **JavaScript** - Adds interactivity and dynamic behavior to the website.
+- **React** - JavaScript library for building user interfaces with components.
+- **Create React App** - A tool that sets up a React project with everything you need to start.
+- **Webpack** - Bundles JavaScript, CSS, and assets for optimized performance.  
+  
 
 ## Available Scripts
 
@@ -13,11 +32,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -39,32 +53,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact:
 
-### Code Splitting
+Feel free to contact me: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**E-mail:** [osojca.marcin1@gmail.com](mailto:osojca.marcin1@gmail.com)

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./style.css"
-import currencies from "../assets";
+import "./style.css";
+import currencies from "../assets/currencies";
 import CalculateButton from "../CalculateButton";
 
 const Form = () => {
