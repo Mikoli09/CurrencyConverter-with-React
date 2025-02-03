@@ -3,7 +3,6 @@ import "./style.css"
 import currencies from "../assets";
 import CalculateButton from "../CalculateButton";
 
-
 const Form = () => {
 
   const [currencyFrom, setSubcurrency] = useState(currencies[0]);
@@ -81,7 +80,6 @@ const Form = () => {
       </form>
     </div >
   );
-
 };
 
 export default Form;

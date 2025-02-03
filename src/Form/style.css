@@ -56,11 +56,6 @@
     flex-direction: column;
   }
 
-  .form__select {
-    width: 100%
-  }
-
-
   .form__paragraph {
     width: 48%;
   }
