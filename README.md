@@ -1,4 +1,4 @@
-# Tasks list
+# Currency converter
 
 ## Demo:
 Check my demo [here](https://mikoli09.github.io/CurrencyConverter-with-React/)
