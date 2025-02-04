@@ -1,7 +1,7 @@
 # Tasks list
 
 ## Demo:
-Check my demo [here]("https://mikoli09.github.io/CurrencyConverter-with-React/")
+Check my demo [here](https://mikoli09.github.io/CurrencyConverter-with-React/)
 
 
 ## Description:
