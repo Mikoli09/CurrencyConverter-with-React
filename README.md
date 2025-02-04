@@ -10,7 +10,7 @@ You may find here my simple currency converter.
 Select one of the three available currencies and convert to the other one.
 
 
-![taskslistGIF](./src/assets/conversion.gif)
+![taskslistGIF](./src/conversion.gif)
 
 ## Technologies used
 - **HTML** - Provides website structure,
