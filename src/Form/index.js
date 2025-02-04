@@ -26,7 +26,7 @@ const Form = () => {
     >
       <div className="form__container">
         <p className="form__paragraph">Convert: </p>
-        <div className="form_test">
+        <div className="form__selectContainer">
           <select
             className="form__select"
             value={currencyFrom.name}
@@ -74,7 +74,7 @@ const Form = () => {
           min="0"
           max="1000000000"
           required
-          placeholder="Ilość pieniędzy"
+          placeholder="Amount"
           value={amountToConvert}
           onChange={(event) => convertAmount(event.target.value)}
         />
