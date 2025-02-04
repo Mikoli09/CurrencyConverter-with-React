@@ -62,7 +62,7 @@ const Form = () => {
         </div>
       </div>
       <div className="form__container">
-        <label for="amount">
+        <label htmlFor="amount">
           <span className="form__label">
             Amount to convert:
           </span>
