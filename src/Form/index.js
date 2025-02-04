@@ -5,17 +5,19 @@ import CalculateButton from "../CalculateButton";
 
 const Form = () => {
 
-  const [currencyFrom, setSubcurrency] = useState(currencies[0]);
-  const [currencyTo, setFinalCurrency] = useState(currencies[0]);
+  const [currencyFrom, setCurrencyFrom] = useState(currencies[0]);
+  const [currencyTo, setCurrencyTo] = useState(currencies[0]);
   const [amountToConvert, convertAmount] = useState("");
   const [result, calculateResult] = useState("")
+
+  const convertedValue = (amountToConvert * currencyFrom.toSubRatio * currencyTo.toFinalRatio).toFixed(2);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(
       `${amountToConvert} ${currencyFrom.name}
       =
-       ${(amountToConvert * currencyFrom.toSubRatio * currencyTo.toFinalRatio).toFixed(2)} ${currencyTo.name}`
+       ${convertedValue} ${currencyTo.name}`
     );
   };
 
@@ -31,7 +33,7 @@ const Form = () => {
             className="form__select"
             value={currencyFrom.name}
             onChange={(event) => {
-              setSubcurrency(currencies.find((currency) => currency.name === event.target.value));
+              setCurrencyFrom(currencies.find((currency) => currency.name === event.target.value));
             }}
           >
             {currencies.map((currency) => (
@@ -47,7 +49,7 @@ const Form = () => {
             className="form__select"
             value={currencyTo.name}
             onChange={(event) => {
-              setFinalCurrency(currencies.find((currency) => currency.name === event.target.value));
+              setCurrencyTo(currencies.find((currency) => currency.name === event.target.value));
             }}
           >
             {currencies.map((currency) => (
