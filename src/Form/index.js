@@ -83,7 +83,9 @@ const Form = () => {
         currencyFrom={currencyFrom}
         currencyTo={currencyTo}
       />
-      <p className="form__resultParagraph">{result}</p>
+      <p className="form__resultParagraph">
+        {result}
+      </p>
     </form>
   );
 };
