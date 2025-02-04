@@ -1,22 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__label {
   width: 100%;
-  max-width: 300px;
   display: inline-block;
   text-align: center;
-  margin: 10px;
+  font-size: 20px;
 }
 
 .form__paragraph {
   color: black;
   font-size: 20px;
-  margin: 30px auto;
+  width: 100%;
 }
 
 .form__select {
   padding: 10px 30px;
-  margin: 10px 30px;
-  max-width: 200px;
-  max-height: 100px;
   background-color: rgb(245, 245, 241);
   border-radius: 5px;
   cursor: pointer;
@@ -24,23 +25,20 @@
 
 .form__amount {
   background-color: rgb(245, 245, 241);
-  padding: 20px;
-  border: solid 2px;
+  padding: 10px;
   border-radius: 5px;
-}
-
-.form__button:hover {
-  background-color: rgb(219, 219, 215);
+  flex-grow: 1;
 }
 
 .form__resultParagraph {
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
   font-size: 40px;
 }
 
 .form__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
@@ -48,19 +46,25 @@
 .form_test {
   display: flex;
   align-items: center;
-
+  gap: 30px;
+  flex-grow: 1;
 }
 
 @media (max-width:767px) {
   .form__container {
     flex-direction: column;
-  }
-
-  .form__paragraph {
-    width: 48%;
+    gap: 10px;
   }
 
   .form_test {
     flex: row;
+  }
+
+  .form__amount {
+    width: 100%;
+  }
+
+  .form__label {
+    margin: 10px;
   }
 }

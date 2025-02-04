@@ -3,11 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    max-width: 800px;
-    min-width: 500px;
+    max-width: 900px;
+    min-width: 350px;
     background-color: rgba(220, 220, 220, 0.95);
-    padding: 30px 50px;
+    padding: 20px 20px;
     border: 2px solid #2e1414;
     border-radius: 10px;
     margin: auto;
