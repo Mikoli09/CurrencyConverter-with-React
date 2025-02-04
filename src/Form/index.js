@@ -20,65 +20,71 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <form
-        onSubmit={onFormSubmit}
-      >
-        <div className="form__container">
-          <p className="form__paragraph">Chcę przeliczyć </p>
-          <div className="form_test">
-            <select
-              className="form__select"
-              value={currencyFrom.name}
-              onChange={(event) => {
-                setSubcurrency(currencies.find((currency) => currency.name === event.target.value));
-              }}
-            >
-              {currencies.map((currency) => (
-                <option
-                  key={currency.id}
-                  value={currency.name}
-                >{currency.name}
-                </option>
-              ))}
-            </select>
-            na
-            <select
-              className="form__select"
-              value={currencyTo.name}
-              onChange={(event) => {
-                setFinalCurrency(currencies.find((currency) => currency.name === event.target.value));
-              }}
-            >
-              {currencies.map((currency) => (
-                <option
-                  key={currency.id}
-                  value={currency.name
-                  }>{currency.name}
-                </option>
-              ))
-              }
-            </select>
-          </div>
+    <form
+      className="form"
+      onSubmit={onFormSubmit}
+    >
+      <div className="form__container">
+        <p className="form__paragraph">Convert: </p>
+        <div className="form_test">
+          <select
+            className="form__select"
+            value={currencyFrom.name}
+            onChange={(event) => {
+              setSubcurrency(currencies.find((currency) => currency.name === event.target.value));
+            }}
+          >
+            {currencies.map((currency) => (
+              <option
+                key={currency.id}
+                value={currency.name}
+              >{currency.name}
+              </option>
+            ))}
+          </select>
+          to
+          <select
+            className="form__select"
+            value={currencyTo.name}
+            onChange={(event) => {
+              setFinalCurrency(currencies.find((currency) => currency.name === event.target.value));
+            }}
+          >
+            {currencies.map((currency) => (
+              <option
+                key={currency.id}
+                value={currency.name
+                }>{currency.name}
+              </option>
+            ))
+            }
+          </select>
         </div>
-        <p className="form__paragraph">
-          <label for="amount"><span className="form__label">Wprowadź kwotę do przeliczenia:</span></label>
-          <input
-            className="form__amount"
-            type="number"
-            step="0.01"
-            min="0"
-            max="1000000000"
-            required
-            placeholder="Ilość pieniędzy"
-            value={amountToConvert}
-            onChange={(event) => convertAmount(event.target.value)}
-          />
-        </p>
-        <CalculateButton currencyFrom={currencyFrom} currencyTo={currencyTo} />
-        <p className="form__resultParagraph">{result}</p>
-      </form>
-    </div >
+      </div>
+      <div className="form__container">
+        <label for="amount">
+          <span className="form__label">
+            Amount to convert:
+          </span>
+        </label>
+        <input
+          className="form__amount"
+          type="number"
+          step="0.01"
+          min="0"
+          max="1000000000"
+          required
+          placeholder="Ilość pieniędzy"
+          value={amountToConvert}
+          onChange={(event) => convertAmount(event.target.value)}
+        />
+      </div>
+      <CalculateButton
+        currencyFrom={currencyFrom}
+        currencyTo={currencyTo}
+      />
+      <p className="form__resultParagraph">{result}</p>
+    </form>
   );
 };
 

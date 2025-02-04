@@ -5,12 +5,12 @@ const CalculateButton = ({ currencyFrom, currencyTo }) => {
     const buttonActive = () => currencyFrom.id !== 0 && currencyTo.id !== 0;
 
     return (
-        <p>
+        <p className="form__paragraph">
             <button
                 className="form__button"
                 disabled={!buttonActive()}
             >
-                Przelicz
+                Convert
             </button>
         </p>
     );
