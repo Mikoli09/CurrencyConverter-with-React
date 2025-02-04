@@ -7,7 +7,7 @@ const Form = () => {
 
   const [currencyFrom, setCurrencyFrom] = useState(currencies[0]);
   const [currencyTo, setCurrencyTo] = useState(currencies[0]);
-  const [amountToConvert, convertAmount] = useState("");
+  const [amountToConvert, setAmountToConvert] = useState("");
   const [result, calculateResult] = useState("")
 
   const convertedValue = (amountToConvert * currencyFrom.toSubRatio * currencyTo.toFinalRatio).toFixed(2);
@@ -78,7 +78,7 @@ const Form = () => {
           required
           placeholder="Amount"
           value={amountToConvert}
-          onChange={(event) => convertAmount(event.target.value)}
+          onChange={(event) => setAmountToConvert(event.target.value)}
         />
       </div>
       <CalculateButton
