@@ -1,9 +1,13 @@
-import Section from "./Section";
+import Header from "./Header";
+import Form from "./Form";
 
 function App() {
 
   return (
-    <Section />
+    <section className="section">
+      <Header title={"Currency converter"} />
+      <Form />
+    </section>
   );
 }
 
