@@ -1,7 +1,17 @@
 import { useState } from "react";
-import "./style.css";
 import currencies from "../assets/currencies";
 import CalculateButton from "../CalculateButton";
+import { StyledForm,
+  Container,
+  Paragraph,
+  SelectContainer,
+  Select,
+  Label,
+  Amount,
+  ResultParagraph
+
+} from "./styled";
+
 
 const Form = () => {
 
@@ -22,15 +32,15 @@ const Form = () => {
   };
 
   return (
-    <form
-      className="form"
+    <StyledForm
       onSubmit={onFormSubmit}
     >
-      <div className="form__container">
-        <p className="form__paragraph">Convert: </p>
-        <div className="form__selectContainer">
-          <select
-            className="form__select"
+      <Container>
+        <Paragraph>
+          Convert:
+        </Paragraph>
+        <SelectContainer>
+          <Select
             value={currencyFrom.name}
             onChange={(event) => {
               setCurrencyFrom(currencies.find((currency) => currency.name === event.target.value));
@@ -43,10 +53,9 @@ const Form = () => {
               >{currency.name}
               </option>
             ))}
-          </select>
+          </Select>
           to
-          <select
-            className="form__select"
+          <Select
             value={currencyTo.name}
             onChange={(event) => {
               setCurrencyTo(currencies.find((currency) => currency.name === event.target.value));
@@ -60,17 +69,16 @@ const Form = () => {
               </option>
             ))
             }
-          </select>
-        </div>
-      </div>
-      <div className="form__container">
-        <label htmlFor="amount">
-          <span className="form__label">
+          </Select>
+        </SelectContainer>
+      </Container>
+      <Container>
+        <Label htmlFor="amount">
+          <span>
             Amount to convert:
           </span>
-        </label>
-        <input
-          className="form__amount"
+        </Label>
+        <Amount
           type="number"
           step="0.01"
           min="0"
@@ -80,15 +88,15 @@ const Form = () => {
           value={amountToConvert}
           onChange={(event) => setAmountToConvert(event.target.value)}
         />
-      </div>
+      </Container>
       <CalculateButton
         currencyFrom={currencyFrom}
         currencyTo={currencyTo}
       />
-      <p className="form__resultParagraph">
+      <ResultParagraph>
         {result}
-      </p>
-    </form>
+      </ResultParagraph>
+    </StyledForm>
   );
 };
 

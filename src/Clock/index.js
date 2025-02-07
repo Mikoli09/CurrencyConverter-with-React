@@ -1,14 +1,13 @@
-
-import "./style.css";
 import { useCurrentDate } from "./useCurrentDate";
+import { Aside } from "./styled";
 
 const Clock = () => {
     const { dateString } = useCurrentDate();
 
     return (
-        <aside className="section__aside">
+        <Aside>
             <p>Dzisiaj jest {dateString}</p>
-        </aside>
+        </Aside>
     )
 };
 

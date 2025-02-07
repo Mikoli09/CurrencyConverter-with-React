@@ -1,17 +1,14 @@
-import "./style.css"
+import { Button } from "./styled";
 
-const CalculateButton = ({ currencyFrom, currencyTo }) => {
 
-    return (
-        <p className="form__paragraph">
-            <button
-                className="form__button"
-                disabled={currencyFrom.id === 0 || currencyTo.id === 0}
-            >
-                Convert
-            </button>
-        </p>
-    );
-};
+const CalculateButton = ({ currencyFrom, currencyTo }) => (
+    <p className="form__paragraph">
+        <Button
+            disabled={currencyFrom.id === 0 || currencyTo.id === 0}
+        >
+            Convert
+        </Button>
+    </p>
+);
 
 export default CalculateButton;

@@ -1,4 +1,4 @@
-import Header from "./Header";
+import SectionHeader from "./SectionHeader";
 import Form from "./Form";
 import Clock from "./Clock";
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <section className="section">
       <Clock />
-      <Header title={"Currency converter"} />
+      <SectionHeader title={"Currency converter"} />
       <Form />
     </section>
   );
