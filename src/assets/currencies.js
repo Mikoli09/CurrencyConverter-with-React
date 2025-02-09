@@ -1,4 +1,3 @@
-
 const currencies = [
     { id: 0, name: "" },
     { id: 1, name: "EUR", toSubRatio: 1, toFinalRatio: 1 },

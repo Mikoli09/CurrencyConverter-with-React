@@ -3,7 +3,6 @@ import Form from "./Form";
 import Clock from "./Clock";
 import { Section } from "./styled";
 
-
 function App() {
 
   return (

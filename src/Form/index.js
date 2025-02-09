@@ -12,7 +12,6 @@ import {
   ResultParagraph
 } from "./styled";
 
-
 const Form = () => {
   const [currencyFrom, setCurrencyFrom] = useState(currencies[0]);
   const [currencyTo, setCurrencyTo] = useState(currencies[0]);

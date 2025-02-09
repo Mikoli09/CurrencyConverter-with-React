@@ -1,7 +1,6 @@
 import { useCurrentDate } from "./useCurrentDate";
 import { Aside } from "./styled";
 
-
 const Clock = () => {
     const { dateString } = useCurrentDate();
 
