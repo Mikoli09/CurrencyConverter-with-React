@@ -1,15 +1,17 @@
 import SectionHeader from "./SectionHeader";
 import Form from "./Form";
 import Clock from "./Clock";
+import { Section } from "./styled";
+
 
 function App() {
 
   return (
-    <section className="section">
+    <Section>
       <Clock />
       <SectionHeader title={"Currency converter"} />
       <Form />
-    </section>
+    </Section>
   );
 }
 

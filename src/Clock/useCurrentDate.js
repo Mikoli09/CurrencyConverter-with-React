@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useState } from "react";
 
+
 export const useCurrentDate = () => {
     const [actualDate, setActualDate] = useState(new Date());
     const dateString = actualDate.toLocaleString(
@@ -20,7 +21,6 @@ export const useCurrentDate = () => {
 
         return () => clearInterval(interval);
     }, []);
-
 
     return {dateString}
 };

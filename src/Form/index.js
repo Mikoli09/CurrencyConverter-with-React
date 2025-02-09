@@ -1,7 +1,8 @@
 import { useState } from "react";
 import currencies from "../assets/currencies";
 import CalculateButton from "../CalculateButton";
-import { StyledForm,
+import {
+  StyledForm,
   Container,
   Paragraph,
   SelectContainer,
@@ -9,12 +10,10 @@ import { StyledForm,
   Label,
   Amount,
   ResultParagraph
-
 } from "./styled";
 
 
 const Form = () => {
-
   const [currencyFrom, setCurrencyFrom] = useState(currencies[0]);
   const [currencyTo, setCurrencyTo] = useState(currencies[0]);
   const [amountToConvert, setAmountToConvert] = useState("");

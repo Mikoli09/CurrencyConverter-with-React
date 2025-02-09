@@ -7,14 +7,14 @@ export const StyledForm = styled.form`
 `;
 
 export const Container = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 
-@media (max-width:767px) {
-    flex-direction: column;
-    gap: 10px;
+    @media (max-width:767px) {
+      flex-direction: column;
+      gap: 10px;
 }
 `;
 
@@ -30,8 +30,8 @@ export const SelectContainer = styled.div`
   gap: 30px;
   flex-grow: 1;
 
-@media (max-width:767px) {
-  flex: row;
+    @media (max-width:767px) {
+      flex: row;
 }
 `;
 
@@ -49,11 +49,10 @@ export const Label = styled.label`
   text-align: center;
   font-size: 20px;
 
-  @media (max-width:767px) {
-    margin: 10px;
+    @media (max-width:767px) {
+      margin: 10px;
 }
 `;
-
 
 export const Amount = styled.input`
   background-color: rgb(245, 245, 241);
@@ -61,8 +60,8 @@ export const Amount = styled.input`
   border-radius: 5px;
   flex-grow: 1;
 
-  @media (max-width:767px) {
-    width: 100%;
+    @media (max-width:767px) {
+      width: 100%;
 }
 `;
 
