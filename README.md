@@ -13,12 +13,13 @@ Select one of the three available currencies and convert to the other one.
 ![taskslistGIF](./assets/conversion.gif)
 
 ## Technologies used
-- **HTML** - Provides website structure,
-- **CSS** - Used for styling the website with the BEM methodology for better organization and readability.
+- **HTML** - Provides website structure.
 - **JavaScript** - Adds interactivity and dynamic behavior to the website.
+- **Styled-components** - Modular and scoped styling, improving code organization and maintainability.
 - **React** - JavaScript library for building user interfaces with components.
 - **Create React App** - A tool that sets up a React project with everything you need to start.
 - **Webpack** - Bundles JavaScript, CSS, and assets for optimized performance.  
+- **Custom hooks** - Manages state and reusable logic, making the code cleaner and easier to maintain.
   
 
 ## Available Scripts
