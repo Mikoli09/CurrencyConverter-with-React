@@ -1,16 +1,27 @@
 # Currency converter
 
-## Demo:
-Check my demo [here](https://mikoli09.github.io/CurrencyConverter-with-React/)
-
 
 ## Description:
 
-You may find here my simple currency converter.  
-Select one of the three available currencies and convert to the other one.
+This is a user-friendly currency converter that allows you to convert between a wide range of global currencies. The application fetches exchange rates from [CurrencyAPI](https://currencyapi.com), which updates its data every 60 seconds, ensuring accurate and timely conversions.
 
+### Features:
+- **Wide Currency Support**: Convert between numerous global currencies.
+- **Accurate Data**: Exchange rates are updated every 60 seconds, providing reliable conversions.
+- **Simple Interface**: An intuitive design for quick and easy currency conversion.
+
+### How to Use:
+1. Select the currency you want to convert from.
+2. Choose the currency you want to convert to.
+3. Enter the amount you wish to convert.
+4. Click the "Convert" button to see the result.  
+  
 
 ![taskslistGIF](./assets/conversion.gif)
+
+## Demo:
+Check my demo [here](https://mikoli09.github.io/CurrencyConverter-with-React/)
+
 
 ## Technologies used
 - **HTML** - Provides website structure.
@@ -20,7 +31,10 @@ Select one of the three available currencies and convert to the other one.
 - **Create React App** - A tool that sets up a React project with everything you need to start.
 - **Webpack** - Bundles JavaScript, CSS, and assets for optimized performance.  
 - **Custom hooks** - Manages state and reusable logic, making the code cleaner and easier to maintain.
-  
+- **Axios** - A JavaScript library for easily fetching data from APIs.
+
+
+
 
 ## Available Scripts
 
