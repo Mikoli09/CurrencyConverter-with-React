@@ -1,16 +1,13 @@
-import SectionHeader from "./SectionHeader";
-import Form from "./Form";
-import Clock from "./Clock";
+import Clock from "./App/Clock";
 import { Section } from "./styled";
-import './scriptTest.js';
+import Content from "./App/Content";
 
 function App() {
 
   return (
     <Section>
       <Clock />
-      <SectionHeader title={"Currency converter"} />
-      <Form />
+      <Content />
     </Section>
   );
 }

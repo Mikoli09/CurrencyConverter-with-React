@@ -1,12 +1,13 @@
 import { useCurrentDate } from "./useCurrentDate";
 import { Aside } from "./styled";
+import { formatClockDate } from "../_utils/dateFormatter";
 
 const Clock = () => {
-    const { dateString } = useCurrentDate();
+    const actualDate = useCurrentDate();
 
     return (
         <Aside>
-            <p>Dzisiaj jest {dateString}</p>
+            <p>Today is {formatClockDate(actualDate)}</p>
         </Aside>
     )
 };

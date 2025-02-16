@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Container = styled.div`
@@ -14,7 +14,7 @@ export const Container = styled.div`
     @media (max-width:767px) {
       flex-direction: column;
       gap: 10px;
-}
+    }
 `;
 
 export const Paragraph = styled.p`
@@ -31,7 +31,7 @@ export const SelectContainer = styled.div`
 
     @media (max-width:767px) {
       flex: row;
-}
+    }
 `;
 
 export const Select = styled.select`
@@ -39,7 +39,6 @@ export const Select = styled.select`
   background-color: rgb(245, 245, 241);
   border-radius: 5px;
   cursor: pointer;
-
 `;
 
 export const Label = styled.label`
@@ -50,7 +49,7 @@ export const Label = styled.label`
 
     @media (max-width:767px) {
       margin: 10px;
-}
+    }
 `;
 
 export const Amount = styled.input`
@@ -61,7 +60,7 @@ export const Amount = styled.input`
 
     @media (max-width:767px) {
       width: 100%;
-}
+    }
 `;
 
 export const ResultParagraph = styled.p`

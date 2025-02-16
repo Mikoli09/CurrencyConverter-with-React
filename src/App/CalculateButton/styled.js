@@ -13,9 +13,9 @@ export const Button = styled.button`
   &:not([disabled]):hover {
     background-color: rgb(219, 219, 215);
     transform: scale(1.02);
- }
+  }
 
- ${({disabled}) => disabled && css`
+  ${({disabled}) => disabled && css`
      cursor: default;
      background-color: rgb(245, 245, 241);
  `}
