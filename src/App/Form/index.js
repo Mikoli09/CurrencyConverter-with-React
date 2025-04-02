@@ -3,14 +3,12 @@ import StyledHeader from "./StyledHeader";
 import CalculateButton from "../CalculateButton";
 import InfoParagraph from "./InfoParagraph";
 import { formatDataFromAPI } from "../_utils/currencyFormatter";
-import ReactSelect from "react-select";
 import { FormContainer, StyledSelect } from "./styled";
 import {
   StyledForm,
   Container,
   Paragraph,
   SelectContainer,
-  Select,
   Label,
   Amount,
   ResultParagraph
@@ -39,92 +37,72 @@ const Form = ({ responseData }) => {
 
   return (
     <FormContainer>
-      <>
-        <StyledHeader />
-        <StyledForm
-          onSubmit={onFormSubmit}
-        >
-          <Container>
-            <Paragraph>
-              Convert:
-            </Paragraph>
-            <SelectContainer>
-              <StyledSelect
-                id="from"
-                classNamePrefix="react-select"
-                openMenuOnClick={true}
-                isSearchable={true}
-                closeMenuOnSelect={true}
-                value={currencies.find((currency) => currency.code === currencyFrom.code)}
-                onChange={(selectedOption) => {
-                  setCurrencyFrom(currencies.find((currency) => currency.code === selectedOption.code));
-                }}
-                options={currencies}
-              />
-              to
-              <StyledSelect
-                id="to"
-                classNamePrefix="react-select"
-                openMenuOnClick={true}
-                isSearchable={true}
-                closeMenuOnSelect={true}
-                value={currencies.find((currency) => currency.code === currencyTo.code)}
-                onChange={(selectedOption) => {
-                  setCurrencyTo(currencies.find((currency) => currency.code === selectedOption.code));
-                }}
-                options={currencies}
-              />
-
-              {/* <Select
-              id="to"
-              value={currencyTo.code}
-              onChange={(event) => {
-                setCurrencyTo(currencies.find((currency) => currency.code === event.target.value));
+      <StyledHeader />
+      <StyledForm
+        onSubmit={onFormSubmit}
+      >
+        <Container>
+          <Paragraph>
+            Convert:
+          </Paragraph>
+          <SelectContainer>
+            <StyledSelect
+              id="from"
+              classNamePrefix="react-select"
+              openMenuOnClick={true}
+              isSearchable={true}
+              closeMenuOnSelect={true}
+              value={currencies.find((currency) => currency.code === currencyFrom.code)}
+              onChange={(selectedOption) => {
+                setCurrencyFrom(currencies.find((currency) => currency.code === selectedOption.code));
               }}
-            >
-              {currencies.map((currency) => (
-                <option
-                  key={currency.id}
-                  value={currency.code
-                  }>{currency.code}
-                </option>
-              ))
-              }
-            </Select> */}
-            </SelectContainer>
-          </Container>
-          <Container>
-            <Label htmlFor="amount">
-              <span>
-                Amount to convert:
-              </span>
-            </Label>
-            <Amount
-              id="amount"
-              type="number"
-              step="0.01"
-              min="0"
-              max="1000000000"
-              required
-              placeholder="Amount"
-              value={amountToConvert}
-              onChange={(event) => setAmountToConvert(event.target.value)}
+              options={currencies}
             />
-          </Container>
-          <CalculateButton
-            currencyFrom={currencyFrom}
-            currencyTo={currencyTo}
+            to
+            <StyledSelect
+              id="to"
+              classNamePrefix="react-select"
+              openMenuOnClick={true}
+              isSearchable={true}
+              closeMenuOnSelect={true}
+              value={currencies.find((currency) => currency.code === currencyTo.code)}
+              onChange={(selectedOption) => {
+                setCurrencyTo(currencies.find((currency) => currency.code === selectedOption.code));
+              }}
+              options={currencies}
+            />
+          </SelectContainer>
+        </Container>
+        <Container>
+          <Label htmlFor="amount">
+            <span>
+              Amount to convert:
+            </span>
+          </Label>
+          <Amount
+            id="amount"
+            type="number"
+            step="0.01"
+            min="0"
+            max="1000000000"
+            required
+            placeholder="Amount"
+            value={amountToConvert}
+            onChange={(event) => setAmountToConvert(event.target.value)}
           />
-          <InfoParagraph
-            date={date}
-          />
-          <ResultParagraph>
-            {result}
-          </ResultParagraph>
-        </StyledForm>
-      </>
+        </Container>
+        <CalculateButton
+          currencyFrom={currencyFrom}
+          currencyTo={currencyTo}
+        />
+        <InfoParagraph
+          date={date}
+        />
+        <ResultParagraph>
+          {result}
+        </ResultParagraph>
+      </StyledForm>
     </FormContainer>
-
   );
 };
 
