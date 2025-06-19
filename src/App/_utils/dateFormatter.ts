@@ -1,4 +1,4 @@
-export const formatClockDate = date =>
+export const formatClockDate = (date: Date): string =>
     date.toLocaleString(
         'en-GB', {
         weekday: "long",
@@ -9,7 +9,8 @@ export const formatClockDate = date =>
         second: "2-digit"
     });
 
-export const formatSourceDate = date =>
+
+export const formatSourceDate = (date: Date): string =>
     date.toLocaleDateString('en-GB', {
         year: 'numeric',
         month: 'long',

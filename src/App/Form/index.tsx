@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { SingleValue } from "react-select";
 import StyledHeader from "./StyledHeader";
 import CalculateButton from "../CalculateButton";
 import InfoParagraph from "./InfoParagraph";
@@ -13,21 +14,29 @@ import {
   Amount,
   ResultParagraph
 } from "./styled";
+import { APIResponse, CurrencyItem } from "../types";
 
+interface FormResponse {
+  responseData: APIResponse;
+}
 
-const Form = ({ responseData }) => {
+const Form = ({ responseData }: FormResponse) => {
   const currencies = formatDataFromAPI(responseData.data);
   const date = new Date(responseData.meta.last_updated_at);
 
-  const [currencyFrom, setCurrencyFrom] = useState([]);
-  const [currencyTo, setCurrencyTo] = useState([]);
-  const [amountToConvert, setAmountToConvert] = useState("");
+  const [currencyFrom, setCurrencyFrom] = useState<CurrencyItem | null>(null);
+  const [currencyTo, setCurrencyTo] = useState<CurrencyItem | null>(null);
+  const [amountToConvert, setAmountToConvert] = useState<number>();
   const [result, setResult] = useState("");
 
-  const convertedValue = (amountToConvert * currencyFrom.toSubRatio * currencyTo.value).toFixed(2);
 
-  const onFormSubmit = (event) => {
+  const onFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+
+    if (!currencyFrom || !currencyTo || amountToConvert === undefined) return;
+
+    const convertedValue = (amountToConvert * currencyFrom.toSubRatio * currencyTo.value).toFixed(2);
+
     setResult(
       `${amountToConvert} ${currencyFrom.code}
       =
@@ -52,11 +61,16 @@ const Form = ({ responseData }) => {
               openMenuOnClick={true}
               isSearchable={true}
               closeMenuOnSelect={true}
-              value={currencies.find((currency) => currency.code === currencyFrom.code)}
-              onChange={(selectedOption) => {
-                setCurrencyFrom(currencies.find((currency) => currency.code === selectedOption.code));
-              }}
+              value={
+                currencyFrom
+                  ? currencies.find((currency) => currency.code === currencyFrom.code)
+                  : null}
               options={currencies}
+              onChange={(selectedOption: SingleValue<CurrencyItem>) => {
+                if (selectedOption) {
+                  setCurrencyFrom(selectedOption);
+                }
+              }}
             />
             to
             <StyledSelect
@@ -65,11 +79,16 @@ const Form = ({ responseData }) => {
               openMenuOnClick={true}
               isSearchable={true}
               closeMenuOnSelect={true}
-              value={currencies.find((currency) => currency.code === currencyTo.code)}
-              onChange={(selectedOption) => {
-                setCurrencyTo(currencies.find((currency) => currency.code === selectedOption.code));
-              }}
+              value={
+                currencyTo
+                  ? currencies.find((currency) => currency.code === currencyTo.code)
+                  : null}
               options={currencies}
+              onChange={(selectedOption: SingleValue<CurrencyItem>) => {
+                if (selectedOption) {
+                  setCurrencyTo(selectedOption);
+                }
+              }}
             />
           </SelectContainer>
         </Container>
@@ -88,12 +107,13 @@ const Form = ({ responseData }) => {
             required
             placeholder="Amount"
             value={amountToConvert}
-            onChange={(event) => setAmountToConvert(event.target.value)}
+            onChange={(event) => setAmountToConvert(Number(event.target.value))}
           />
         </Container>
         <CalculateButton
           currencyFrom={currencyFrom}
           currencyTo={currencyTo}
+          amountToConvert={amountToConvert}
         />
         <InfoParagraph
           date={date}

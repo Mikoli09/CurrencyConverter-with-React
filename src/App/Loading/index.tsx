@@ -1,6 +1,11 @@
+import { AxiosError } from "axios";
 import { LoadingParagraph } from "./styled";
 
-const Loading = ({error}) => {
+interface LoadingProps {
+    error: AxiosError | null;
+}
+
+const Loading = ({error}: LoadingProps) => {
 
     return (
         <div>

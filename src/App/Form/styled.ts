@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import ReactSelect from "react-select";
 
-
-export const StyledSelect = styled(ReactSelect)`
+export const StyledSelect = styled(ReactSelect as any)`
 
 .react-select__control {
     background-color: #f0f0f0;

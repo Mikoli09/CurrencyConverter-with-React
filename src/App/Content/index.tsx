@@ -12,7 +12,7 @@ const Content = () => {
             />
             :
             <Loading
-                error={error}
+                error={error ?? null}
             />
     )
 };
