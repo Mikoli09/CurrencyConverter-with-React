@@ -11,8 +11,8 @@ export const useCurrencies = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // const response = await axios.get(APIsource);
-                const response = await axios.get("/templateDataFromAPI.json");
+                const response = await axios.get(APIsource);
+                // const response = await axios.get("/templateDataFromAPI.json");
                 if (!response.data) {
                     throw new Error();
                 }
